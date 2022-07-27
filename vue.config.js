@@ -1,0 +1,20 @@
+module.exports={
+    pages:{
+        index:{
+            entry:"src/main.js",
+        },
+    },
+    lintOnSave:false,//关闭语法检查
+    //开启代理服务器
+    devServer:{
+        proxy:{
+            '/api':{
+                target:'https://fang.transfigure.cn:1852/',
+                changORigin:true,
+                pathRewrite:{
+                    '^/api':''
+                }
+            }
+        }
+    }
+}
