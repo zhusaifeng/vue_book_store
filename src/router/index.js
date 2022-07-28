@@ -2,6 +2,8 @@
 import VueRouter from 'vue-router'
 import MainBook from '../pages/MainBook'
 import BookList from '../pages/BookList'
+import BookListMore from '../pages/BookListMore'
+import BookDetail from '../pages/BookDetail'
 import User from '../pages/User'
 
 
@@ -20,7 +22,14 @@ export default new VueRouter({
             path:'/User',
             component:User
 
+        },
+        {
+            path:'/BookListMore',
+            component:BookListMore
+        },
+        {
+            path:'/BookDetail',
+            component:BookDetail
         }
     ]
-
 })

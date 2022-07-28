@@ -1,67 +1,27 @@
 <template>
     <div>
-        <!-- <h1>我是MainBook</h1> -->
-        <div class="comtainer">
-            <div class="newbook" v-for="data in recommendbook" :key="data.bookId">
-                <img src="" alt="" class="booking">
-                <p class="info">
-                    书名：{{data.bookName}}<br>
-                    作者：{{data.bookAuthor}}<br>
-                    分类：{{data.bookClassifyOne}}<br>
-                    出版社：{{data.bookPress}}<br>
-                    库存：{{data.bookResidue}}
-                </p>
-
-            </div>
-
+        <div class="container">
+            <!-- 推荐书籍组件 -->
+            <RecommendBook></RecommendBook>
+            <!-- 热门书籍组件 -->
+            <HotBook></HotBook>
+            <!-- 新书组件 -->
+            <NewBook></NewBook>
         </div>
-    </div>
+        </div>
 </template>
 
 <script>
+import HotBook from '../components/HotBook'
+import RecommendBook from '../components/RecommendBook'
+import NewBook from '../components/NewBook'
 export default {
     name:'MainBook',
-    data() {
-        return {
-            hotbook:[],
-            recommendbook:[],
-            newbook:[]
-        }
+    components:{
+        HotBook,
+        RecommendBook,
+        NewBook
     },
-    mounted(){
-        //通过接口获取热门书籍
-        this.$axios.get('api/book/api-index-getHotBook').then(
-            response=>{
-                console.log(response.data)
-                this.hotbook=response.data
-            },
-            error=>{
-                console.log(error.message)
-            }
-        )
-        //通过接口获取推荐书籍
-        this.$axios.get('api/book/api-index-getRecommendBook/1').then(
-            response=>{
-                console.log(response.data),
-                this.recommendbook=response.data
-            },
-            error=>{
-                console.log(error.message)
-            }
-        )
-        //通过接口获取新书
-        this.$axios.get('api/book/api-index-getNewBook').then(
-            response=>{
-                console.log(response.data),
-                this.newbook=response.data
-            },
-            error=>{
-                console.log(error.message)
-            }
-        )
-    } 
-
-
 }
 </script>
 
@@ -74,20 +34,7 @@ export default {
     height: 425px;
     /* border: 2px solid powderblue; */
     overflow-x:hidden;
-    overflow-y: auto;
-}
-
-.arrow{
-    position: relative;
-    width: 284px;
-    height: 20px;
-    left: 8px;
-    right: 8px;
-    margin-top: 5px;
-    /* border: 2px solid gainsboro; */
-    font-size: 2px;
-    text-align: center;
-    background-color:lightskyblue;
+    overflow-y: scroll;
 }
 
 .newbook{
@@ -105,20 +52,9 @@ export default {
     position: absolute;
     top:20px;
 }
-.title{
-    /* position:relative; */
-    /* left: 85px; */
-    margin-left: 85px;
-    margin-top: 20px;
-    font-size: 0.01em;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    width: 165px;
-    height: 20px;
 
-}
 .info{
-    position: absolute;
+    position: relative;
     left: 100px;
     font-size: xx-small;
     margin-top: 10px;
@@ -175,7 +111,7 @@ li{
    list-style-type: none;/* 去掉li前的点 */
     float: left;/*将li设置成做浮动，变为联动*/
 }
-a{
+.a{
     display: block;/*将a变成块状*/
     width: 100px;/*设置块的宽度*/
     height: 50px;/*设置块的长度*/
@@ -196,7 +132,6 @@ background-color: #a5aaa7;
 ::-webkit-scrollbar {/*滚动条整体样式*/
     width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
     height: 4px;
-
 }
 ::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
     border-radius: 5px;
