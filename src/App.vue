@@ -7,7 +7,7 @@
         <li><router-link to="/User" active-class="active" class="a">用户</router-link></li>
       </ul> 
       <!-- 指定组件的呈现位置 -->
-      <router-view></router-view>
+      <router-view :key="$route.fullPath"></router-view>
     </div>
 </template>
 

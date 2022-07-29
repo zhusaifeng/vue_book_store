@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <BookSearch></BookSearch>
         <ul v-for="data in booklist" :key="data" class="bookclassify">
             <router-link :to="'/BookListMore?bookclassify='+data"><li class="li" @click="to_book_detail(data)">{{data}}</li></router-link>
         </ul>
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+import BookSearch from '../components/BookSearch.vue'
 export default {
     name:'BookList',
     data() {
@@ -18,7 +20,6 @@ export default {
         to_book_detail(data){
             console.log("点击",data)
         }
-
     },
     mounted() {
         this.$axios.get('api/book/api-book-classifyone-all').then(
@@ -31,6 +32,9 @@ export default {
             }
         )
     },
+    components:{
+        BookSearch
+    }
 }
 </script>
 

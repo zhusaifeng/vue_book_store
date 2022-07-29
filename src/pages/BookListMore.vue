@@ -26,6 +26,14 @@ export default {
     mounted() {
         this.$axios.get('api/book/api-book-book-byclassifyone/'+this.$route.query.bookclassify).then(
             response=>{
+                for(var i=0;i<response.data.length;i++){
+                if(response.data[i].bookAuthor==''){
+                    response.data[i].bookAuthor="更新中..."
+                }
+                if(response.data[i].bookPress==''){
+                    response.data[i].bookPress="更新中..."
+                }
+                }
                 console.log(response.data)
                 this.booklist=response.data
             },
