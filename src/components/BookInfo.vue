@@ -1,7 +1,7 @@
 <template>
         <div class="container">
             <img :src="BookDetail.bookImageBig" alt="" class="book">
-            <p class="info">
+            <p class="info1">
                 书名：{{BookDetail.bookName}}<br>
                 作者：{{BookDetail.bookAuthor}}<br>
                 出版社：{{BookDetail.bookPress}}<br>
@@ -45,13 +45,12 @@ export default {
 </script>
 
 <style scoped>
-    .book{
+.book{
     width: 80px;
     height: 80px;
     position: absolute;
     top:5px;
-
-
+    left: 5px;
 }
 .li{
     margin-left: 20px;
@@ -61,6 +60,7 @@ export default {
 .clear1{
     position: absolute;
     top: 90px;
+    font-size: 50%;
 }
 .clear2{
     position: absolute;
@@ -68,5 +68,17 @@ export default {
     border-top: 1px solid rgb(219, 213, 213);
     width: 99%;
     height:70px;
+    font-size: 50%;
+}
+
+.info1{
+    position: relative;
+    left: 35%;
+    top: 3%;
+    font-size: 25%;
+    margin-top: 10px;
+    line-height: 15px;
+    /* border: 1px solid black; */
+    width: 140px;
 }
 </style>

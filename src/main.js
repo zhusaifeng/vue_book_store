@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 //引入VueRouter
 import VueRouter from 'vue-router'
+//引入适配工具
+import 'amfe-flexible'
+import 'amfe-flexible/index.js'
 //引入路由器
 import router from './router'
 

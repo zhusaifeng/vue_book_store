@@ -9,6 +9,8 @@ import User from '../pages/User'
 
 //创建并暴露一个路由器
 export default new VueRouter({
+    // mode: 'history',
+    // base: '/hot/', //加上这一行
     routes:[
         {
             path:'/MainBook',

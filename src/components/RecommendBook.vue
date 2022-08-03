@@ -1,3 +1,4 @@
+// 推荐书籍卡片
 <template>
     <div>
         <!-- 展示推荐书籍 -->
@@ -18,10 +19,12 @@
 </template>
 
 <script>
+import '../assets/css/public.css'
 export default {
     data() {
         return {
-            recommendbook:[]
+            recommendbook:[],
+            url:process.env.VUE_APP_URL
         }
     },
     mounted() {
@@ -41,6 +44,7 @@ export default {
                 }
                 console.log(response.data),
                 this.recommendbook=response.data
+                console.log(this.url)
             },
             error=>{
                 console.log(error.message)

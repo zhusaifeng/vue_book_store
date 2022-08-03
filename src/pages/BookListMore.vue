@@ -1,6 +1,7 @@
+// 同一分类下的所有书本
 <template>
     <div class="container">
-        <div v-for="data in booklist" :key="data.bookId">
+        <div v-for="data in booklist" :key="data.bookId" style="margin-top:5%">
             <router-link :to="'/BookDetail?bookid='+data.bookId">
             <img v-if="data.bookImageBig!=''" :src="data.bookImageBig" alt="" class="img">
             <img v-if="data.bookImageBig==''" src="../assets/1.png" class="img">
@@ -46,6 +47,17 @@ export default {
 </script>
 
 <style scoped>
+.container{
+    position:relative;
+    /* left: 37%;
+    top: 113px; */
+    width: 100%;
+    /* height: 425px; */
+    /* border: 2px solid powderblue; */
+    overflow-x:hidden;
+    overflow-y: scroll;
+}
+
 .img{
     position: absolute;
     width: 18%;
@@ -57,7 +69,7 @@ export default {
     position:relative;
     top: 0px;
     left: 100px;
-    font-size: smaller;
+    font-size:30%;
 }
 
 </style>

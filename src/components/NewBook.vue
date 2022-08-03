@@ -1,3 +1,4 @@
+// 新书组件
 <template>
     <div>
         <div class="newbook" v-for="data in newbook" :key="data.bookid">

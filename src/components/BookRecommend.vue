@@ -1,3 +1,5 @@
+<!-- 详情页面的推荐书籍组件 -->
+
 <template>
     <div class="recommend"> 
         <p>喜欢本书的人还喜欢：</p>
@@ -43,6 +45,7 @@ export default {
     margin-left: 4px;
     overflow-x:hidden;
     overflow-y: auto;
+    font-size: 40%;
 }
 .img{
     width: 25%;
