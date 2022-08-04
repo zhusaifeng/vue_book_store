@@ -13,6 +13,10 @@ export default new VueRouter({
     // base: '/hot/', //加上这一行
     routes:[
         {
+            path: '/',
+            redirect:'BookList'
+        },
+        {
             path:'/MainBook',
             component:MainBook
         },

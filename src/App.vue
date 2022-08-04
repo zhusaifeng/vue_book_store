@@ -8,12 +8,12 @@
       </ul> 
       <!-- 指定组件的呈现位置 -->
       <router-view :key="$route.fullPath"></router-view>
-      <BookList v-if="show"></BookList>
+      <!-- <BookList></BookList> -->
     </div>
 </template>
 
 <script>
-import BookList from './pages/BookList.vue'
+// import BookList from './pages/BookList.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 // import MainBook from './components/MainBook.vue'
 // import User from './components/User.vue'
@@ -33,7 +33,7 @@ export default {
     }
   },
   components: {
-    BookList
+    // BookList
   },
 };
 </script>
