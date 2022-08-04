@@ -74,7 +74,7 @@ button{
     position:absolute;
     left:20%;
     top: 90%;
-    width: 60%;
+    width: 63%;
     /* height: 20px; */
     z-index: 99999;
 }
