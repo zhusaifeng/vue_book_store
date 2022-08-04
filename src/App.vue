@@ -2,13 +2,12 @@
     <div class="bigcontainer">
         <ul class="topul">
         <!-- vue中使用router-link实现页面跳转 -->
-        <li class="topli" @click="showbooklist()"><router-link to="/MainBook" active-class="active">推荐</router-link></li>
-        <li class="topli" @click="showbooklist()"><router-link to="/BookList" active-class="active">书库</router-link></li>
-        <li class="topli" @click="showbooklist()"><router-link to="/User" active-class="active">用户</router-link></li>
+        <li class="topli"><router-link to="/MainBook" active-class="active">推荐</router-link></li>
+        <li class="topli"><router-link to="/BookList" active-class="active">书库</router-link></li>
+        <li class="topli"><router-link to="/User" active-class="active">用户</router-link></li>
       </ul> 
       <!-- 指定组件的呈现位置 -->
       <router-view :key="$route.fullPath"></router-view>
-      <!-- <BookList></BookList> -->
     </div>
 </template>
 
@@ -23,13 +22,6 @@ export default {
   data() {
     return {
       show:true
-    }
-  },
-  methods: {
-    showbooklist:function(){
-      this.show=false;
-      console.log(this.show);
-      // location.reload()
     }
   },
   components: {
