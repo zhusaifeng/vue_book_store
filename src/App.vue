@@ -50,8 +50,8 @@ a{
 .bigcontainer{
     position: relative;
     border: 2px solid powderblue;
-    left: 5%;
-    width: 90%;
+    /* left: 5%; */
+    width: 100%;
     height:480px;
     display:inline-grid;
     grid-template-rows:10% 90%;
