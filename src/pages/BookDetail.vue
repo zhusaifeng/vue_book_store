@@ -5,8 +5,10 @@
     <BookInfo></BookInfo>
     <!-- 详情页面的推荐书籍组件 -->
     <BookRecommend></BookRecommend>
-    <button style="left:170px">下载txt</button>
-    <button>立即阅读</button>
+    <div>
+        <button class="btn">下载txt</button>
+        <button class="btn" style="left:3rem"> 立即阅读</button>
+    </div>
 </div>
 </template>
 
@@ -21,26 +23,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container{
     position:relative;
-    /* left: 37%;
-    top: 113px; */
-    width: 299px;
-    height: 425px;
-    /* border: 2px solid powderblue; */
-    /* overflow-x:hidden;
-    overflow-y: scroll; */
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-rows:45% 34% 21% ;
 }
 button{
-    position:absolute;
-    top:370px;
-    left:50px;
+    position:relative;
+    top: 30%;
+    left:1.5rem;
     border: 1px solid red;
-    width: 80px;
-    height: 40px;
+    width: 2rem;
+    height: 1rem;
     padding: 7px;
-    font-size: small;
+    font-size: .3rem;
 }
 
 

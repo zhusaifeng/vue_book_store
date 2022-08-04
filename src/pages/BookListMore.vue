@@ -1,7 +1,7 @@
 // 同一分类下的所有书本
 <template>
     <div class="container">
-        <div v-for="data in booklist" :key="data.bookId" style="margin-top:5%">
+        <div v-for="data in booklist" :key="data.bookId" style="margin-top:.8rem">
             <router-link :to="'/BookDetail?bookid='+data.bookId">
             <img v-if="data.bookImageBig!=''" :src="data.bookImageBig" alt="" class="img">
             <img v-if="data.bookImageBig==''" src="../assets/1.png" class="img">
@@ -63,13 +63,12 @@ export default {
     width: 18%;
     /* height: 13%; */
     /* margin: 10px; */
-    margin-left: 20px;
+    margin-left: .5rem;
 }
 .msg{
     position:relative;
-    top: 0px;
-    left: 100px;
-    font-size:30%;
+    left: 2.5rem;
+    font-size:.3rem;
 }
 
 </style>

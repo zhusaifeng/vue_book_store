@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="overflow:auto">
         <div class="container">
             <!-- 推荐书籍组件 -->
             <RecommendBook></RecommendBook>
@@ -35,8 +35,6 @@ export default {
     width: 100%;
     /* height:100%; */
     /* border: 2px solid rgb(1, 14, 15); */
-    overflow-x:hidden;
-    overflow-y: scroll;
 }
 
 </style>

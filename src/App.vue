@@ -36,7 +36,7 @@ a{
     color: #fff;
     text-align: center;/*字体居中*/
     text-decoration: none;/*去掉下划线*/
-    font-size: 15px;
+    font-size: .4rem;
 }
 /* a:hover{
   background-color: rgb(240, 130, 40);

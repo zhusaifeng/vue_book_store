@@ -2,9 +2,10 @@
 <template>
     <div class="container">
         <div class="userinfo">
-            <img src="../assets/logo.png" alt="" class="headphoto">
-            <span>用户名：朱赛峰</span><br>
-            <span style="left:35%">信用分:80分</span>
+            <div class="center-container">
+                <img src="../assets/logo.png" alt="" class="headphoto">
+                <div style="text-align:center;font-size:.4rem">用户名:朱赛峰<br>信用分:80分</div>
+            </div>
         </div>
         <div>
             <div class="setting">当前借阅<div class="arrow">></div></div>
@@ -29,20 +30,25 @@ export default {
 .userinfo{
     background-color: lightcyan;
     height: 45%;
-    width: 100%;
+    width:100%;
     font-size: 30%;
+    position: relative;
+}
+.center-container{
+    width: 70%;
+    height: 70%;
+    position: relative;
+    left: 15%;
+    top: 15%;
+    display: inline-grid;
+    grid-template-rows:60% 40% ;
+
 }
 .headphoto{
     width: 20%;
     position: relative;
-    top:20%;
-    left: 120px;
-}
-span{
-    position: relative;
-    top: 50px;
-    left: 40px;
-    font-size: 50%;
+    top:30%;
+    left: 40%;
 }
 .setting{
     position: relative;
@@ -51,7 +57,7 @@ span{
     height: 20;
     padding: 10px;
     margin-top: 5px;
-    font-size: 45%;
+    font-size: .4rem;
     /* margin-top: 20px; */
 }
 .setting .arrow{

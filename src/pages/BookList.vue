@@ -3,12 +3,10 @@
     <div class="booklist-container">
         <!-- 搜索框组件 -->
         <BookSearch></BookSearch>
-        <div class="classify">
-            <div class="container2">
-                <ul v-for="data in booklist" :key="data" class="bookclassify">
-                    <router-link :to="'/BookListMore?bookclassify='+data"><li class="booklist" @click="to_book_detail(data)">{{data}}</li></router-link>
-                </ul>
-            </div>
+        <div class="container2">
+            <ul v-for="data in booklist" :key="data" class="bookclassify">
+                <router-link :to="'/BookListMore?bookclassify='+data"><li class="booklist" @click="to_book_detail(data)">{{data}}</li></router-link>
+            </ul>
         </div>
     </div>
 </template>
@@ -47,11 +45,9 @@ export default {
 <style scoped>
 .container2{
     position:relative;
-    /* left: 37%;
-    top: 113px; */
     width: 100%;
     height: 100%;
-    /* border: 2px solid powderblue; */
+    /* border: 2px solid red; */
     overflow-x:hidden;
     overflow-y: scroll;
 }
@@ -59,20 +55,21 @@ export default {
     position: relative;
     /* border: 1px solid red; */
     margin-top: 10px;
-    height: 15px;
-    width: 270px;
+    height: .5rem;
+    width: 60%;
     margin-left: 15px;
 }
 .booklist{
+    /* border: 1px solid red; */
     margin-left: 20px;
     list-style-type: square;
     color: black;
     z-index:-1;
-    font-size: 18px;
+    font-size: .5rem;
 }
 
 .booklist-container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: inline-grid;
     grid-template-rows: 10% 90%;
 }

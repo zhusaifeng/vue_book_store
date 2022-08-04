@@ -2,7 +2,7 @@
 
 <template>
     <div class="recommend"> 
-        <p>喜欢本书的人还喜欢：</p>
+        <p style="font-size:.3rem">喜欢本书的人还喜欢：</p>
         <div  v-for="(data,index) in bookrecommend"  :key="index" style="display:inline">
             <router-link :to="'/BookDetail?bookid='+data.bookId" v-if="data!=null">
                 <img v-if="data!=null" :src="data.bookImageBig" alt="" class="img">
@@ -38,14 +38,12 @@ export default {
 .recommend{
     border-top: 1px solid rgb(219, 213, 213);
     border-bottom: 1px solid rgb(219, 213, 213);
-    position: absolute;
-    top: 210px;
-    width: 100%;
+    position: relative;
+    width: 99%;
     height: 140px;
     margin-left: 4px;
     overflow-x:hidden;
     overflow-y: auto;
-    font-size: 40%;
 }
 .img{
     width: 25%;

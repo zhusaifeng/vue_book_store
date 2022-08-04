@@ -1,7 +1,7 @@
 // 搜索框组件
 <template>
     <div style="position:relative">
-        <input type="text" placeholder="请输入书名" v-model="bookname" v-on:keyup.enter="search">
+        <input type="text" placeholder="请输入书名" v-model="bookname" v-on:keyup.enter="search" style="font-size:.3rem;border:1px solid yellow">
         <img src="../assets/search.jpg" alt="search" class="SearchIcon" @click="search">
         <!-- <div class="search-result">搜索结果</div> -->
         <router-link :to="'/BookDetail?bookid='+this.bookid">
@@ -52,8 +52,9 @@ input{
     left: 20%;
     top: 20%;
     /* bottom: 8px; */
-    width: 60%;
+    width: 5.5rem;
     height: 40%;
+    padding: auto;
 }
 button{
     position: relative;
@@ -61,7 +62,7 @@ button{
     top: 5px;
 }
 .search-result{
-    font-size: small;
+    font-size: .3rem;
     width: 70%;
 }
 .search-result:hover{
@@ -83,7 +84,15 @@ button{
     top:22%;
     left: 75%;
     /* right: 8px; */
-    width: 6%;
+    width: .5rem;
+}
+
+
+input::-webkit-input-placeholder {
+    /* placeholder颜色 */
+    color: #aab2bd;
+    /* placeholder字体大小 */
+    font-size: .35rem;
 }
 
 </style>
